@@ -110,20 +110,24 @@ const { error } = await supabaseClient
         // Error
         // --------------------------------------------------
 
-        if (error) {
+   if (error) {
 
-            console.error("Reservation Error:", error);
+    console.error("Reservation Error:", error);
 
-            alert(
-                "Sorry, your reservation could not be submitted. Please try again."
-            );
+    alert(
+        "SUPABASE ERROR:\n\n" +
+        error.message +
+        "\n\nCODE: " +
+        error.code +
+        "\n\nDETAILS: " +
+        error.details
+    );
 
-            button.disabled = false;
-            button.textContent = "RESERVE A TABLE";
+    button.disabled = false;
+    button.textContent = "RESERVE A TABLE";
 
-            return;
-        }
-
+    return;
+}
         // --------------------------------------------------
         // Success
         // --------------------------------------------------
