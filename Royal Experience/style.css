@@ -1,0 +1,1620 @@
+/* ========================================= 
+   ROYAL EXPERIENCE 
+   LUXURY CAFE WEBSITE 
+========================================= */ 
+ 
+ 
+/* ========================================= 
+   RESET 
+========================================= */ 
+ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+html { 
+    scroll-behavior: smooth; 
+} 
+ 
+body { 
+    background: #080706; 
+    color: #f5f1e8; 
+    font-family: "Montserrat", Arial, sans-serif; 
+} 
+ 
+a { 
+    text-decoration: none; 
+    color: inherit; 
+} 
+ 
+ 
+/* ========================================= 
+   COLORS 
+========================================= */ 
+ 
+:root { 
+ 
+    --gold: #d8ad45; 
+ 
+    --gold-light: #e6c66d; 
+ 
+    --black: #080706; 
+ 
+    --dark: #0f0d0b; 
+ 
+    --white: #f5f1e8; 
+ 
+    --gray: #cfcac0; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   NAVBAR 
+========================================= */ 
+ 
+.navbar { 
+ 
+    position: fixed; 
+ 
+    top: 0; 
+ 
+    left: 0; 
+ 
+    width: 100%; 
+ 
+    height: 118px; 
+ 
+    background: rgba(5, 5, 5, 0.94); 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    padding: 0 8%; 
+ 
+    z-index: 999; 
+ 
+    border-bottom: 1px solid rgba(216, 173, 69, 0.18); 
+ 
+} 
+ 
+ 
+/* LOGO */ 
+ 
+.logo { 
+ 
+    width: 180px; 
+ 
+    display: flex; 
+ 
+    flex-direction: column; 
+ 
+    align-items: center; 
+ 
+    justify-content: center; 
+ 
+    color: var(--gold); 
+ 
+    font-family: "Cormorant Garamond", serif; 
+ 
+    line-height: 0.8; 
+    transform: translateX(-25px);
+ 
+} 
+ 
+ 
+.crown { 
+ 
+    font-size: 24px; 
+ 
+    margin-bottom: 2px; 
+ 
+} 
+ 
+ 
+.logo-r { 
+ 
+    width: 42px; 
+ 
+    height: 42px; 
+ 
+    border: 2px solid var(--gold); 
+ 
+    border-radius: 50%; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    justify-content: center; 
+ 
+    font-size: 27px; 
+ 
+} 
+ 
+ 
+.logo-name { 
+ 
+    font-size: 25px; 
+ 
+    letter-spacing: 3px; 
+ 
+    margin-top: 8px; 
+ 
+} 
+ 
+ 
+.logo-experience { 
+ 
+    font-size: 12px; 
+ 
+    letter-spacing: 2px; 
+ 
+    margin-top: 5px; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   NAV MENU 
+========================================= */ 
+ 
+.nav-menu { 
+ 
+    flex: 1; 
+ 
+    height: 100%; 
+ 
+    display: flex; 
+ 
+    justify-content: center; 
+ 
+    align-items: center; 
+ 
+    gap: 43px; 
+ 
+} 
+ 
+ 
+.nav-menu a { 
+ 
+    position: relative; 
+ 
+    font-size: 14px; 
+ 
+    font-weight: 500; 
+ 
+    padding: 48px 0 40px; 
+ 
+    transition: 0.3s; 
+ 
+} 
+ 
+ 
+.nav-menu a:hover { 
+ 
+    color: var(--gold); 
+ 
+} 
+ 
+ 
+.nav-menu a.active { 
+ 
+    color: var(--gold); 
+ 
+} 
+ 
+ 
+.nav-menu a.active::after { 
+ 
+    content: ""; 
+ 
+    position: absolute; 
+ 
+    left: 0; 
+ 
+    bottom: 27px; 
+ 
+    width: 100%; 
+ 
+    height: 2px; 
+ 
+    background: var(--gold); 
+ 
+} 
+ 
+ 
+/* RESERVE BUTTON */ 
+ 
+.reserve-top { 
+ 
+    border: 1px solid var(--gold); 
+ 
+    color: var(--gold); 
+ 
+    padding: 15px 27px; 
+ 
+    font-size: 13px; 
+ 
+    transition: 0.3s; 
+ 
+} 
+ 
+ 
+.reserve-top:hover { 
+ 
+    background: var(--gold); 
+ 
+    color: #080706; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   HERO 
+========================================= */ 
+ 
+.hero { 
+ 
+    position: relative; 
+ 
+    min-height: 675px; 
+ 
+    height: 100vh; 
+ 
+    background-image: url("hero.jpg"); 
+ 
+    background-size: cover; 
+ 
+    background-position: center center; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+} 
+ 
+ 
+/* DARK OVERLAY */ 
+ 
+.hero-overlay { 
+ 
+    position: absolute; 
+ 
+    inset: 0; 
+ 
+    background: 
+        linear-gradient( 
+            90deg, 
+            rgba(0,0,0,0.68), 
+            rgba(0,0,0,0.22) 65%, 
+            rgba(0,0,0,0.10) 
+        ); 
+ 
+} 
+ 
+ 
+/* HERO CONTENT */ 
+ 
+.hero-content {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+}
+ 
+ 
+.hero h1 { 
+ 
+    font-family: "Cormorant Garamond", serif; 
+ 
+    font-size: 88px; 
+ 
+    line-height: 0.86; 
+ 
+    font-weight: 600; 
+ 
+    letter-spacing: 2px; 
+ 
+} 
+ 
+ 
+.white-title { 
+ 
+    display: block; 
+ 
+    color: white; 
+ 
+} 
+ 
+ 
+.gold-title { 
+ 
+    display: block; 
+ 
+    color: var(--gold); 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   HERO LINE 
+========================================= */ 
+ 
+.gold-line { 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    gap: 8px; 
+ 
+    width: 385px; 
+ 
+    margin-top: 29px; 
+ 
+    color: var(--gold); 
+ 
+} 
+ 
+ 
+.gold-line span { 
+ 
+    height: 1px; 
+ 
+    background: var(--gold); 
+ 
+    flex: 1; 
+ 
+} 
+ 
+ 
+.gold-line b { 
+ 
+    font-size: 14px; 
+ 
+} 
+ 
+ 
+/* HERO DESCRIPTION */ 
+ 
+.hero-description { 
+ 
+    margin-top: 20px; 
+ 
+    font-family: "Cormorant Garamond", serif; 
+ 
+    font-size: 24px; 
+ 
+    line-height: 1.35; 
+ 
+    color: white; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   BUTTONS 
+========================================= */ 
+ 
+.hero-buttons { 
+ 
+    display: flex; 
+ 
+    gap: 17px; 
+ 
+    margin-top: 32px; 
+ 
+} 
+ 
+ 
+.gold-button { 
+ 
+    display: inline-flex; 
+ 
+    align-items: center; 
+ 
+    justify-content: center; 
+ 
+    padding: 18px 32px; 
+ 
+    background: var(--gold); 
+ 
+    color: #080706; 
+ 
+    border: 1px solid var(--gold); 
+ 
+    font-family: "Montserrat", sans-serif; 
+ 
+    font-size: 14px; 
+ 
+    font-weight: 600; 
+ 
+    letter-spacing: 0.5px; 
+ 
+    cursor: pointer; 
+ 
+    transition: 0.3s; 
+ 
+} 
+ 
+ 
+.gold-button:hover { 
+ 
+    background: var(--gold-light); 
+ 
+} 
+ 
+ 
+.outline-button { 
+ 
+    display: inline-flex; 
+ 
+    align-items: center; 
+ 
+    justify-content: center; 
+ 
+    padding: 18px 32px; 
+ 
+    border: 1px solid var(--gold); 
+ 
+    color: var(--gold); 
+ 
+    font-size: 14px; 
+ 
+    font-weight: 600; 
+ 
+    transition: 0.3s; 
+ 
+} 
+ 
+ 
+.outline-button:hover { 
+ 
+    background: var(--gold); 
+ 
+    color: #080706; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   SECTIONS 
+========================================= */ 
+ 
+.why-section, 
+.menu-section, 
+.reservation-section, 
+.gallery-section, 
+.contact-section { 
+ 
+    background: 
+        linear-gradient( 
+            180deg, 
+            #12100e, 
+            #0a0908 
+        ); 
+ 
+    padding: 58px 7%; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   SECTION TITLES 
+========================================= */ 
+ 
+.section-title { 
+ 
+    display: flex; 
+ 
+    justify-content: center; 
+ 
+    align-items: center; 
+ 
+    gap: 25px; 
+ 
+} 
+ 
+ 
+.section-title span { 
+ 
+    width: 145px; 
+ 
+    height: 1px; 
+ 
+    background: rgba(216, 173, 69, 0.55); 
+ 
+} 
+ 
+ 
+.section-title h2 { 
+ 
+    font-family: "Cormorant Garamond", serif; 
+ 
+    color: var(--gold); 
+ 
+    font-size: 40px; 
+ 
+    letter-spacing: 3px; 
+ 
+    font-weight: 600; 
+ 
+} 
+ 
+ 
+.section-symbol { 
+ 
+    text-align: center; 
+ 
+    color: var(--gold); 
+ 
+    font-size: 25px; 
+ 
+    margin: 4px 0 25px; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   WHY CHOOSE US 
+========================================= */ 
+ 
+.features { 
+ 
+    max-width: 1180px; 
+ 
+    margin: auto; 
+ 
+    display: grid; 
+ 
+    grid-template-columns: repeat(3, 1fr); 
+ 
+    gap: 50px; 
+ 
+} 
+ 
+ 
+.feature-card { 
+ 
+    min-height: 235px; 
+ 
+    border: 1px solid rgba(216, 173, 69, 0.4); 
+ 
+    border-radius: 12px; 
+ 
+    padding: 22px 30px; 
+ 
+    text-align: center; 
+ 
+    background: rgba(20, 18, 15, 0.5); 
+ 
+    transition: 0.4s; 
+ 
+} 
+ 
+ 
+.feature-card:hover { 
+ 
+    transform: translateY(-7px); 
+ 
+    border-color: var(--gold); 
+ 
+} 
+ 
+ 
+.feature-icon { 
+ 
+    width: 94px; 
+ 
+    height: 94px; 
+ 
+    border: 1px solid var(--gold); 
+ 
+    border-radius: 50%; 
+ 
+    display: flex; 
+ 
+    justify-content: center; 
+ 
+    align-items: center; 
+ 
+    margin: auto; 
+ 
+    color: var(--gold); 
+ 
+    font-size: 34px; 
+ 
+} 
+ 
+ 
+.feature-card h3 { 
+ 
+    margin-top: 15px; 
+ 
+    color: var(--gold); 
+ 
+    font-family: "Cormorant Garamond", serif; 
+ 
+    font-size: 22px; 
+ 
+    letter-spacing: 1px; 
+ 
+} 
+ 
+ 
+.feature-card p { 
+ 
+    color: #ddd; 
+ 
+    font-size: 14px; 
+ 
+    line-height: 1.6; 
+ 
+    margin-top: 7px; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   MENU 
+========================================= */ 
+ 
+.menu-section { 
+ 
+    padding-top: 70px; 
+ 
+} 
+ 
+ 
+.menu-grid { 
+ 
+    max-width: 1220px; 
+ 
+    margin: auto; 
+ 
+    display: grid; 
+ 
+    grid-template-columns: repeat(5, 1fr); 
+ 
+    gap: 15px; 
+ 
+} 
+ 
+ 
+.drink-card { 
+ 
+    background: #11100e; 
+ 
+    border: 1px solid rgba(216, 173, 69, 0.45); 
+ 
+    overflow: hidden; 
+ 
+    border-radius: 6px; 
+ 
+    transition: 0.4s; 
+ 
+} 
+ 
+ 
+.drink-card:hover { 
+ 
+    transform: translateY(-7px); 
+ 
+    border-color: var(--gold); 
+ 
+} 
+ 
+ 
+.drink-image { 
+ 
+    height: 185px; 
+ 
+    background-image: url("hero.jpg"); 
+ 
+    background-size: cover; 
+ 
+    background-position: center; 
+ 
+} 
+ 
+ 
+/* =========================================
+   DRINK IMAGES
+========================================= */
+
+/* DRINK 1 - ROYAL CAPPUCCINO */
+.drink-one { 
+
+    background-position: 52% 57%; 
+
+} 
+
+
+/* DRINK 2 - ICED LATTE */
+.drink-two { 
+
+    background-image: url("images/ICEDLATTE.jpg");
+    background-size: cover;
+    background-position: center;
+
+} 
+
+
+/* DRINK 3 - CLASSIC ESPRESSO */
+.drink-three { 
+
+    background-image: url("images/CLASSIC\ ESPRESSO.jpg");
+    background-size: cover;
+    background-position: center;
+
+} 
+
+
+/* DRINK 4 - MOCHA DELIGHT */
+.drink-four { 
+
+    background-image: url("images/MOCHA\ DELGHT.jpg");
+    background-size: cover;
+    background-position: center;
+
+} 
+
+
+/* DRINK 5 - CARAMEL MACCHIATO */
+.drink-five { 
+
+    background-image: url("images/CARAMEL\ MACCHIATO.jpg");
+    background-size: cover;
+    background-position: center;
+
+
+} 
+ 
+ 
+.drink-info { 
+ 
+    text-align: center; 
+ 
+    padding: 10px 12px 14px; 
+ 
+} 
+ 
+ 
+.drink-info h3 { 
+ 
+    color: var(--gold); 
+ 
+    font-family: "Cormorant Garamond", serif; 
+ 
+    font-size: 17px; 
+ 
+} 
+ 
+ 
+.drink-info p { 
+ 
+    color: #ddd; 
+ 
+    font-size: 12px; 
+ 
+    line-height: 1.5; 
+ 
+    min-height: 38px; 
+ 
+    margin-top: 5px; 
+ 
+} 
+ 
+ 
+.price { 
+ 
+    display: block; 
+ 
+    color: var(--gold); 
+ 
+    font-size: 14px; 
+ 
+    font-weight: 600; 
+ 
+    margin-top: 8px; 
+ 
+} 
+ 
+ 
+/* MENU BUTTON */ 
+ 
+.menu-button { 
+ 
+    display: table; 
+ 
+    margin: 28px auto 0; 
+ 
+    padding: 13px 32px; 
+ 
+    border: 1px solid var(--gold); 
+ 
+    color: var(--gold); 
+ 
+    font-size: 12px; 
+ 
+    font-weight: 600; 
+ 
+    transition: 0.3s; 
+ 
+} 
+ 
+ 
+.menu-button:hover { 
+ 
+    background: var(--gold); 
+ 
+    color: #080706; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   ABOUT 
+========================================= */ 
+ 
+.about-section { 
+ 
+    display: grid; 
+ 
+    grid-template-columns: 1fr 1fr; 
+ 
+    min-height: 520px; 
+ 
+    background: #0b0a09; 
+ 
+} 
+ 
+ 
+.about-image { 
+ 
+    background-image: url("./images/about.jpg");
+ 
+    background-size: cover; 
+ 
+    background-position: center; 
+ 
+    min-height: 500px; 
+ 
+} 
+ 
+ 
+.about-content { 
+ 
+    padding: 80px 8%; 
+ 
+    display: flex; 
+ 
+    flex-direction: column; 
+ 
+    justify-content: center; 
+ 
+} 
+ 
+ 
+.small-title { 
+ 
+    color: var(--gold); 
+ 
+    font-size: 13px; 
+ 
+    letter-spacing: 3px; 
+ 
+} 
+ 
+ 
+.about-content h2 { 
+ 
+    color: var(--gold); 
+ 
+    font-family: "Cormorant Garamond", serif; 
+ 
+    font-size: 48px; 
+ 
+    line-height: 0.95; 
+ 
+    margin-top: 12px; 
+ 
+} 
+ 
+ 
+.about-line { 
+ 
+    width: 90px; 
+ 
+    height: 1px; 
+ 
+    background: var(--gold); 
+ 
+    margin: 22px 0; 
+ 
+} 
+ 
+ 
+.about-content p { 
+ 
+    color: #ddd; 
+ 
+    font-size: 14px; 
+ 
+    line-height: 1.7; 
+ 
+    max-width: 550px; 
+ 
+    margin-bottom: 8px; 
+ 
+} 
+ 
+ 
+.about-button { 
+ 
+    margin: 25px 0 0; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   RESERVATION 
+========================================= */ 
+ 
+.reservation-section { 
+ 
+    background: #100e0c; 
+ 
+} 
+ 
+ 
+.reservation-form { 
+ 
+    max-width: 850px; 
+ 
+    margin: 25px auto 0; 
+ 
+    display: grid; 
+ 
+    grid-template-columns: 1fr 1fr; 
+ 
+    gap: 15px; 
+ 
+} 
+ 
+ 
+.reservation-form input, 
+.reservation-form select, 
+.reservation-form textarea { 
+ 
+    width: 100%; 
+ 
+    padding: 15px; 
+ 
+    background: #090807; 
+ 
+    border: 1px solid rgba(216, 173, 69, 0.5); 
+ 
+    color: white; 
+ 
+    font-family: "Montserrat", sans-serif; 
+ 
+    font-size: 13px; 
+ 
+    outline: none; 
+ 
+} 
+ 
+ 
+.reservation-form input:focus, 
+.reservation-form select:focus, 
+.reservation-form textarea:focus { 
+ 
+    border-color: var(--gold); 
+ 
+} 
+ 
+ 
+.reservation-form textarea { 
+ 
+    grid-column: 1 / -1; 
+ 
+    min-height: 120px; 
+ 
+    resize: vertical; 
+ 
+} 
+ 
+ 
+.reservation-form button { 
+ 
+    grid-column: 1 / -1; 
+ 
+    border: none; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   GALLERY 
+========================================= */ 
+ 
+.gallery-section { 
+ 
+    background: #0a0908; 
+ 
+} 
+ 
+ 
+.gallery-grid { 
+ 
+    display: grid; 
+ 
+    grid-template-columns: repeat(5, 1fr); 
+ 
+    gap: 14px; 
+ 
+    max-width: 1250px; 
+ 
+    margin: 25px auto 0; 
+ 
+} 
+ 
+ 
+.gallery-item { 
+ 
+    height: 180px; 
+ 
+    border: 1px solid rgba(216, 173, 69, 0.4); 
+ 
+    background-image: url("hero.jpg"); 
+ 
+    background-size: cover; 
+ 
+    transition: 0.4s; 
+ 
+} 
+ 
+ 
+.gallery-item:hover { 
+ 
+    transform: scale(1.03); 
+ 
+} 
+ 
+ 
+.image-one { 
+ 
+    background-image: url("./images/gallery-1.jpg"); 
+} 
+ 
+ 
+.image-two { 
+ 
+    background-image: url("./images/gallery-2.jpg"); 
+} 
+ 
+ 
+.image-three { 
+ 
+    background-image: url("./images/gallery-3.jpg"); 
+} 
+ 
+ 
+.image-four { 
+ 
+    background-image: url("./images/gallery-4.jpg"); 
+} 
+ 
+ 
+.image-five { 
+ 
+    background-image: url("./images/gallery-5.jpg"); 
+} 
+ 
+ 
+/* ========================================= 
+   CONTACT 
+========================================= */ 
+ 
+.contact-section { 
+ 
+    border-top: 1px solid rgba(216, 173, 69, 0.2); 
+ 
+} 
+ 
+ 
+.contact-grid { 
+ 
+    max-width: 1200px; 
+ 
+    margin: 25px auto 0; 
+ 
+    display: grid; 
+ 
+    grid-template-columns: repeat(4, 1fr); 
+ 
+    gap: 15px; 
+ 
+} 
+ 
+ 
+.contact-box { 
+ 
+    border: 1px solid rgba(216, 173, 69, 0.4); 
+ 
+    padding: 25px; 
+ 
+    text-align: center; 
+ 
+} 
+ 
+ 
+.contact-box h3 { 
+ 
+    color: var(--gold); 
+ 
+    font-family: "Cormorant Garamond", serif; 
+ 
+    font-size: 18px; 
+ 
+    letter-spacing: 1px; 
+ 
+} 
+ 
+ 
+.contact-box p { 
+ 
+    color: #ddd; 
+ 
+    font-size: 12px; 
+ 
+    line-height: 1.7; 
+ 
+    margin-top: 10px; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   FOOTER 
+========================================= */ 
+ 
+footer { 
+ 
+    display: grid; 
+ 
+    grid-template-columns: 2fr 2fr 1fr; 
+ 
+    gap: 30px; 
+ 
+    padding: 40px 7%; 
+ 
+    background: #050504; 
+ 
+    border-top: 1px solid rgba(216, 173, 69, 0.3); 
+ 
+    color: #aaa; 
+ 
+    font-size: 12px; 
+ 
+    line-height: 1.8; 
+ 
+} 
+ 
+ 
+footer h3, 
+footer h4 { 
+ 
+    color: var(--gold); 
+ 
+} 
+ 
+ 
+.social { 
+ 
+    color: var(--gold); 
+ 
+    font-size: 16px; 
+ 
+} 
+ 
+ 
+.copyright { 
+ 
+    background: #030302; 
+ 
+    color: #888; 
+ 
+    text-align: center; 
+ 
+    padding: 13px; 
+ 
+    font-size: 11px; 
+ 
+} 
+ 
+ 
+/* ========================================= 
+   RESPONSIVE 
+========================================= */ 
+ 
+@media (max-width: 1100px) { 
+ 
+    .navbar { 
+ 
+        padding: 0 4%; 
+ 
+    } 
+ 
+ 
+    .nav-menu { 
+ 
+        gap: 22px; 
+ 
+    } 
+ 
+ 
+    .menu-grid { 
+ 
+        grid-template-columns: repeat(3, 1fr); 
+ 
+    } 
+ 
+ 
+    .gallery-grid { 
+ 
+        grid-template-columns: repeat(3, 1fr); 
+ 
+    } 
+ 
+} 
+ 
+ 
+/* TABLET */ 
+ 
+@media (max-width: 800px) { 
+ 
+    .navbar { 
+ 
+        height: auto; 
+ 
+        padding: 12px 4%; 
+ 
+        flex-wrap: wrap; 
+ 
+    } 
+ 
+ 
+    .logo { 
+ 
+        width: 110px; 
+ 
+    } 
+ 
+ 
+    .nav-menu { 
+ 
+        order: 3; 
+ 
+        width: 100%; 
+ 
+        overflow-x: auto; 
+ 
+        justify-content: flex-start; 
+ 
+        gap: 25px; 
+ 
+    } 
+ 
+ 
+    .nav-menu a { 
+ 
+        padding: 15px 0; 
+ 
+        white-space: nowrap; 
+ 
+        font-size: 11px; 
+ 
+    } 
+ 
+ 
+    .nav-menu a.active::after { 
+ 
+        bottom: 5px; 
+ 
+    } 
+ 
+ 
+    .hero { 
+ 
+        min-height: 750px; 
+ 
+    } 
+ 
+ 
+    .hero-content { 
+ 
+        margin-left: 7%; 
+ 
+        padding-top: 130px; 
+ 
+    } 
+ 
+ 
+    .hero h1 { 
+ 
+        font-size: 65px; 
+ 
+    } 
+ 
+ 
+    .features { 
+ 
+        grid-template-columns: 1fr; 
+ 
+    } 
+ 
+ 
+    .menu-grid { 
+ 
+        grid-template-columns: repeat(2, 1fr); 
+ 
+    } 
+ 
+ 
+    .about-section { 
+ 
+        grid-template-columns: 1fr; 
+ 
+    } 
+ 
+ 
+    .about-image { 
+ 
+        min-height: 350px; 
+ 
+    } 
+ 
+ 
+    .contact-grid { 
+ 
+        grid-template-columns: repeat(2, 1fr); 
+ 
+    } 
+ 
+} 
+ 
+ 
+/* MOBILE */ 
+ 
+@media (max-width: 550px) { 
+ 
+    .reserve-top { 
+ 
+        display: none; 
+ 
+    } 
+ 
+ 
+    .hero { 
+ 
+        min-height: 700px; 
+ 
+    } 
+ 
+ 
+    .hero-content { 
+ 
+        margin-left: 7%; 
+ 
+    } 
+ 
+ 
+    .hero h1 { 
+ 
+        font-size: 53px; 
+ 
+    } 
+ 
+ 
+    .hero-description { 
+ 
+        font-size: 20px; 
+ 
+    } 
+ 
+ 
+    .hero-buttons { 
+ 
+        flex-direction: column; 
+ 
+        width: 190px; 
+ 
+    } 
+ 
+ 
+    .gold-line { 
+ 
+        width: 270px; 
+ 
+    } 
+ 
+ 
+    .section-title { 
+ 
+        gap: 10px; 
+ 
+    } 
+ 
+ 
+    .section-title span { 
+ 
+        width: 35px; 
+ 
+    } 
+ 
+ 
+    .section-title h2 { 
+ 
+        font-size: 29px; 
+ 
+    } 
+ 
+ 
+    .menu-grid { 
+ 
+        grid-template-columns: 1fr; 
+ 
+    } 
+ 
+ 
+    .gallery-grid { 
+ 
+        grid-template-columns: 1fr; 
+ 
+    } 
+ 
+ 
+    .contact-grid { 
+ 
+        grid-template-columns: 1fr; 
+ 
+    } 
+ 
+ 
+    .reservation-form { 
+ 
+        grid-template-columns: 1fr; 
+ 
+    } 
+ 
+ 
+    .reservation-form textarea, 
+    .reservation-form button { 
+ 
+        grid-column: auto; 
+ 
+    } 
+ 
+ 
+    footer { 
+ 
+        grid-template-columns: 1fr; 
+ 
+        text-align: center; 
+ 
+    } 
+ 
+}
+
+/* =========================================
+   LANGUAGE BUTTON
+========================================= */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-btn {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 14px 17px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.language-btn:hover {
+    background: var(--gold);
+    color: #080706;
+}
+
+
+/* =========================================
+   ARABIC MODE
+========================================= */
+
+html[dir="rtl"] body {
+    font-family: "Noto Kufi Arabic", "Montserrat", Arial, sans-serif;
+}
+
+html[dir="rtl"] .hero-content {
+    left: auto;
+    right: 2%;
+    text-align: right;
+}
+
+html[dir="rtl"] .hero-buttons {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .gold-line {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .about-content {
+    text-align: right;
+}
+
+html[dir="rtl"] .about-line {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .reservation-form input,
+html[dir="rtl"] .reservation-form select,
+html[dir="rtl"] .reservation-form textarea {
+    text-align: right;
+}
+
+
+/* =========================================
+   RESPONSIVE LANGUAGE BUTTON
+========================================= */
+
+@media (max-width: 800px) {
+
+    .nav-actions {
+        gap: 8px;
+    }
+
+    .language-btn {
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+
+    .reserve-top {
+        padding: 10px 13px;
+        font-size: 10px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .nav-actions {
+        margin-left: auto;
+    }
+
+    html[dir="rtl"] .nav-actions {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .language-btn {
+        padding: 9px 11px;
+    }
+
+}

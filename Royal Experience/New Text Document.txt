@@ -1,0 +1,12 @@
+https://ikekcalnwfdazaunwanc.supabase.co/rest/v1/
+
+
+
+
+const SUPABASE_URL = "https://xxxxxxxxxxxxxxxxxxxxxx";
+const SUPABASE_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+
+const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);

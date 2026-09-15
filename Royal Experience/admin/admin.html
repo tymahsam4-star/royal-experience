@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Royal Experience | Admin</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="admin-logo">
+
+            <span class="crown">♛</span>
+
+            <span class="logo-r">R</span>
+
+            <span class="logo-name">
+                ROYAL
+            </span>
+
+            <span class="logo-experience">
+                EXPERIENCE
+            </span>
+
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <button class="nav-item active" data-section="dashboard">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>DASHBOARD</span>
+            </button>
+
+            <button class="nav-item" data-section="reservations">
+                <i class="fa-regular fa-calendar"></i>
+                <span>RESERVATIONS</span>
+                <b class="notification-count">3</b>
+            </button>
+
+            <button class="nav-item" data-section="menu">
+                <i class="fa-solid fa-mug-hot"></i>
+                <span>MENU</span>
+            </button>
+
+            <button class="nav-item" data-section="gallery">
+                <i class="fa-regular fa-images"></i>
+                <span>GALLERY</span>
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>SETTINGS</span>
+            </button>
+
+            <a href="../index.html" class="back-site">
+                <i class="fa-solid fa-arrow-left"></i>
+                BACK TO WEBSITE
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= TOP BAR ================= -->
+
+        <header class="topbar">
+
+            <div>
+
+                <span class="top-small">
+                    WELCOME BACK
+                </span>
+
+                <h1>
+                    ROYAL EXPERIENCE
+                </h1>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="notification-button">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>3</span>
+
+                </button>
+
+
+                <div class="admin-profile">
+
+                    <div class="profile-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+                        <strong>
+                            ADMIN
+                        </strong>
+
+                        <small>
+                            Royal Experience
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section id="dashboard" class="admin-section active">
+
+            <div class="page-title">
+
+                <div>
+
+                    <span>
+                        ROYAL EXPERIENCE
+                    </span>
+
+                    <h2>
+                        DASHBOARD
+                    </h2>
+
+                </div>
+
+                <div class="date-box">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span id="todayDate">
+                        TODAY
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- STAT CARDS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TODAY'S RESERVATIONS
+                        </span>
+
+                        <strong>
+                            8
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            MENU ITEMS
+                        </span>
+
+                        <strong>
+                            24
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL GUESTS
+                        </span>
+
+                        <strong>
+                            32
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card notification-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            NEW REQUESTS
+                        </span>
+
+                        <strong>
+                            3
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECENT RESERVATIONS -->
+
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span>
+                            RESERVATIONS
+                        </span>
+
+                        <h3>
+                            RECENT RESERVATIONS
+                        </h3>
+
+                    </div>
+
+                    <button class="gold-small-button"
+                        data-open-section="reservations">
+
+                        VIEW ALL
+
+                    </button>
+
+                </div>
+
+
+                <div class="reservation-table">
+
+                    <div class="table-row table-head">
+
+                        <span>GUEST</span>
+                        <span>DATE</span>
+                        <span>TIME</span>
+                        <span>GUESTS</span>
+                        <span>STATUS</span>
+                        <span>ACTION</span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span class="guest-name">
+                            Sarah Ahmad
+                        </span>
+
+                        <span>
+                            Sep 03, 2026
+                        </span>
+
+                        <span>
+                            08:00 PM
+                        </span>
+
+                        <span>
+                            4
+                        </span>
+
+                        <span>
+                            <b class="status pending">
+                                PENDING
+                            </b>
+                        </span>
+
+                        <span>
+                            <button class="view-button">
+                                VIEW
+                            </button>
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span class="guest-name">
+                            Omar Khaled
+                        </span>
+
+                        <span>
+                            Sep 03, 2026
+                        </span>
+
+                        <span>
+                            09:00 PM
+                        </span>
+
+                        <span>
+                            2
+                        </span>
+
+                        <span>
+                            <b class="status confirmed">
+                                CONFIRMED
+                            </b>
+                        </span>
+
+                        <span>
+                            <button class="view-button">
+                                VIEW
+                            </button>
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span class="guest-name">
+                            Lina Ahmad
+                        </span>
+
+                        <span>
+                            Sep 04, 2026
+                        </span>
+
+                        <span>
+                            07:30 PM
+                        </span>
+
+                        <span>
+                            6
+                        </span>
+
+                        <span>
+                            <b class="status pending">
+                                PENDING
+                            </b>
+                        </span>
+
+                        <span>
+                            <button class="view-button">
+                                VIEW
+                            </button>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="quick-actions">
+
+                <button class="quick-card"
+                    data-open-section="menu">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <div>
+                        <strong>
+                            ADD MENU ITEM
+                        </strong>
+
+                        <span>
+                            Add a new drink or dessert
+                        </span>
+                    </div>
+
+                </button>
+
+
+                <button class="quick-card"
+                    data-open-section="reservations">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <div>
+                        <strong>
+                            VIEW RESERVATIONS
+                        </strong>
+
+                        <span>
+                            Manage customer bookings
+                        </span>
+                    </div>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESERVATIONS ================= -->
+
+        <section id="reservations" class="admin-section">
+
+            <div class="page-title">
+
+                <div>
+
+                    <span>
+                        CUSTOMER BOOKINGS
+                    </span>
+
+                    <h2>
+                        RESERVATIONS
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span>
+                            BOOKING MANAGEMENT
+                        </span>
+
+                        <h3>
+                            ALL RESERVATIONS
+                        </h3>
+
+                    </div>
+
+                    <button class="gold-small-button">
+                        <i class="fa-solid fa-filter"></i>
+                        FILTER
+                    </button>
+
+                </div>
+
+
+                <div class="reservation-table">
+
+                    <div class="table-row table-head">
+
+                        <span>GUEST</span>
+                        <span>EMAIL</span>
+                        <span>DATE</span>
+                        <span>TIME</span>
+                        <span>GUESTS</span>
+                        <span>STATUS</span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span class="guest-name">
+                            Sarah Ahmad
+                        </span>
+
+                        <span>
+                            sarah@email.com
+                        </span>
+
+                        <span>
+                            Sep 03, 2026
+                        </span>
+
+                        <span>
+                            08:00 PM
+                        </span>
+
+                        <span>
+                            4
+                        </span>
+
+                        <span class="reservation-actions">
+
+                            <button class="accept-button">
+                                ACCEPT
+                            </button>
+
+                            <button class="reject-button">
+                                REJECT
+                            </button>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span class="guest-name">
+                            Omar Khaled
+                        </span>
+
+                        <span>
+                            omar@email.com
+                        </span>
+
+                        <span>
+                            Sep 03, 2026
+                        </span>
+
+                        <span>
+                            09:00 PM
+                        </span>
+
+                        <span>
+                            2
+                        </span>
+
+                        <span>
+                            <b class="status confirmed">
+                                CONFIRMED
+                            </b>
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span class="guest-name">
+                            Lina Ahmad
+                        </span>
+
+                        <span>
+                            lina@email.com
+                        </span>
+
+                        <span>
+                            Sep 04, 2026
+                        </span>
+
+                        <span>
+                            07:30 PM
+                        </span>
+
+                        <span>
+                            6
+                        </span>
+
+                        <span class="reservation-actions">
+
+                            <button class="accept-button">
+                                ACCEPT
+                            </button>
+
+                            <button class="reject-button">
+                                REJECT
+                            </button>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MENU MANAGEMENT ================= -->
+
+        <section id="menu" class="admin-section">
+
+            <div class="page-title">
+
+                <div>
+
+                    <span>
+                        FOOD & DRINKS
+                    </span>
+
+                    <h2>
+                        MENU MANAGEMENT
+                    </h2>
+
+                </div>
+
+
+                <button id="addItemButton"
+                    class="gold-button">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    ADD NEW ITEM
+
+                </button>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span>
+                            ROYAL MENU
+                        </span>
+
+                        <h3>
+                            ALL MENU ITEMS
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div id="menuItems"
+                    class="admin-menu-grid">
+
+
+                    <!-- ITEM 1 -->
+
+                    <div class="admin-menu-item">
+
+                        <div class="item-image royal-cappuccino"></div>
+
+                        <div class="item-details">
+
+                            <h3>
+                                ROYAL CAPPUCCINO
+                            </h3>
+
+                            <span class="category">
+                                COFFEE
+                            </span>
+
+                            <p>
+                                Smooth espresso with steamed milk and beautiful foam.
+                            </p>
+
+                            <strong class="item-price">
+                                $5.50
+                            </strong>
+
+                        </div>
+
+                        <div class="item-actions">
+
+                            <button class="edit-button">
+                                <i class="fa-solid fa-pen"></i>
+                                EDIT
+                            </button>
+
+                            <button class="delete-button">
+                                <i class="fa-solid fa-trash"></i>
+                                DELETE
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ITEM 2 -->
+
+                    <div class="admin-menu-item">
+
+                        <div class="item-image iced-latte"></div>
+
+                        <div class="item-details">
+
+                            <h3>
+                                ICED LATTE
+                            </h3>
+
+                            <span class="category">
+                                COLD DRINKS
+                            </span>
+
+                            <p>
+                                Refreshing iced latte with premium milk.
+                            </p>
+
+                            <strong class="item-price">
+                                $5.00
+                            </strong>
+
+                        </div>
+
+                        <div class="item-actions">
+
+                            <button class="edit-button">
+                                <i class="fa-solid fa-pen"></i>
+                                EDIT
+                            </button>
+
+                            <button class="delete-button">
+                                <i class="fa-solid fa-trash"></i>
+                                DELETE
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ITEM 3 -->
+
+                    <div class="admin-menu-item">
+
+                        <div class="item-image classic-espresso"></div>
+
+                        <div class="item-details">
+
+                            <h3>
+                                CLASSIC ESPRESSO
+                            </h3>
+
+                            <span class="category">
+                                COFFEE
+                            </span>
+
+                            <p>
+                                Rich and bold Italian espresso with unforgettable taste.
+                            </p>
+
+                            <strong class="item-price">
+                                $3.50
+                            </strong>
+
+                        </div>
+
+                        <div class="item-actions">
+
+                            <button class="edit-button">
+                                <i class="fa-solid fa-pen"></i>
+                                EDIT
+                            </button>
+
+                            <button class="delete-button">
+                                <i class="fa-solid fa-trash"></i>
+                                DELETE
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ITEM 4 -->
+
+                    <div class="admin-menu-item">
+
+                        <div class="item-image mocha"></div>
+
+                        <div class="item-details">
+
+                            <h3>
+                                MOCHA DELIGHT
+                            </h3>
+
+                            <span class="category">
+                                COFFEE
+                            </span>
+
+                            <p>
+                                Espresso, chocolate and steamed milk.
+                            </p>
+
+                            <strong class="item-price">
+                                $5.80
+                            </strong>
+
+                        </div>
+
+                        <div class="item-actions">
+
+                            <button class="edit-button">
+                                <i class="fa-solid fa-pen"></i>
+                                EDIT
+                            </button>
+
+                            <button class="delete-button">
+                                <i class="fa-solid fa-trash"></i>
+                                DELETE
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ITEM 5 -->
+
+                    <div class="admin-menu-item">
+
+                        <div class="item-image caramel"></div>
+
+                        <div class="item-details">
+
+                            <h3>
+                                CARAMEL MACCHIATO
+                            </h3>
+
+                            <span class="category">
+                                COFFEE
+                            </span>
+
+                            <p>
+                                Espresso with creamy milk and caramel.
+                            </p>
+
+                            <strong class="item-price">
+                                $5.50
+                            </strong>
+
+                        </div>
+
+                        <div class="item-actions">
+
+                            <button class="edit-button">
+                                <i class="fa-solid fa-pen"></i>
+                                EDIT
+                            </button>
+
+                            <button class="delete-button">
+                                <i class="fa-solid fa-trash"></i>
+                                DELETE
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GALLERY MANAGEMENT ================= -->
+
+        <section id="gallery" class="admin-section">
+
+            <div class="page-title">
+
+                <div>
+
+                    <span>
+                        ROYAL EXPERIENCE
+                    </span>
+
+                    <h2>
+                        GALLERY
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span>
+                            WEBSITE IMAGES
+                        </span>
+
+                        <h3>
+                            GALLERY MANAGEMENT
+                        </h3>
+
+                    </div>
+
+                    <button class="gold-small-button">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        ADD IMAGE
+
+                    </button>
+
+                </div>
+
+
+                <div class="gallery-admin-grid">
+
+                    <div class="gallery-admin-item">
+                        <div class="gallery-preview gallery-1"></div>
+                        <span>GALLERY 01</span>
+                    </div>
+
+                    <div class="gallery-admin-item">
+                        <div class="gallery-preview gallery-2"></div>
+                        <span>GALLERY 02</span>
+                    </div>
+
+                    <div class="gallery-admin-item">
+                        <div class="gallery-preview gallery-3"></div>
+                        <span>GALLERY 03</span>
+                    </div>
+
+                    <div class="gallery-admin-item">
+                        <div class="gallery-preview gallery-4"></div>
+                        <span>GALLERY 04</span>
+                    </div>
+
+                    <div class="gallery-admin-item">
+                        <div class="gallery-preview gallery-5"></div>
+                        <span>GALLERY 05</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= ADD ITEM MODAL ================= -->
+
+    <div id="itemModal" class="modal">
+
+        <div class="modal-box">
+
+            <button class="close-modal">
+                ×
+            </button>
+
+            <span class="modal-small">
+                ROYAL EXPERIENCE
+            </span>
+
+            <h2>
+                ADD NEW ITEM
+            </h2>
+
+
+            <form id="itemForm">
+
+                <label>
+                    ITEM NAME
+                </label>
+
+                <input
+                    type="text"
+                    id="itemName"
+                    placeholder="Example: Royal Chocolate Cake"
+                    required
+                >
+
+
+                <label>
+                    CATEGORY
+                </label>
+
+                <select id="itemCategory" required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option>
+                        Coffee
+                    </option>
+
+                    <option>
+                        Cold Drinks
+                    </option>
+
+                    <option>
+                        Desserts
+                    </option>
+
+                    <option>
+                        Food
+                    </option>
+
+                </select>
+
+
+                <label>
+                    PRICE
+                </label>
+
+                <input
+                    type="number"
+                    id="itemPrice"
+                    placeholder="5.50"
+                    step="0.01"
+                    required
+                >
+
+
+                <label>
+                    DESCRIPTION
+                </label>
+
+                <textarea
+                    id="itemDescription"
+                    placeholder="Item description..."
+                    required
+                ></textarea>
+
+
+                <label>
+                    IMAGE
+                </label>
+
+                <input
+                    type="file"
+                    id="itemImage"
+                    accept="image/*"
+                >
+
+
+                <button
+                    type="submit"
+                    class="gold-button modal-submit">
+
+                    ADD ITEM
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
