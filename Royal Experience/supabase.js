@@ -1,10 +1,20 @@
-const SUPABASE_URL = "https://ikekcalnwfdazaunwanc.supabase.co/rest/v1/";
+// ======================================================
+// ROYAL EXPERIENCE - SUPABASE CONNECTION
+// ======================================================
+
+const SUPABASE_URL = "https://ikekcalnwfdazaunwanc.supabase.co";
 const SUPABASE_KEY = "sb_publishable_l_GaN_6vC5FtJ2mQr4c9wA_Cp2F2D-9";
 
 const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
 );
+
+
+// ======================================================
+// RESERVATION SYSTEM
+// ======================================================
+
 const reservationForm = document.querySelector(".reservation-form");
 
 if (reservationForm) {
@@ -13,10 +23,18 @@ if (reservationForm) {
 
         event.preventDefault();
 
+        // --------------------------------------------------
+        // Get form elements
+        // --------------------------------------------------
+
         const inputs = reservationForm.querySelectorAll("input");
         const select = reservationForm.querySelector("select");
         const textarea = reservationForm.querySelector("textarea");
         const button = reservationForm.querySelector("button");
+
+        // --------------------------------------------------
+        // Get customer information
+        // --------------------------------------------------
 
         const customerName = inputs[0].value.trim();
         const customerEmail = inputs[1].value.trim();
@@ -25,12 +43,16 @@ if (reservationForm) {
         const guest = select.value;
         const specialRequest = textarea.value.trim();
 
-        // Detect device automatically
+        // --------------------------------------------------
+        // Detect device
+        // --------------------------------------------------
+
         function getDeviceType() {
 
             const ua = navigator.userAgent || "";
             const platform = navigator.platform || "";
 
+            // iPad
             if (
                 /iPad/i.test(ua) ||
                 (platform === "MacIntel" && navigator.maxTouchPoints > 1)
@@ -38,21 +60,37 @@ if (reservationForm) {
                 return "iPad";
             }
 
-            if (/Android/i.test(ua) && !/Mobile/i.test(ua)) {
+            // Android Tablet
+            if (
+                /Android/i.test(ua) &&
+                !/Mobile/i.test(ua)
+            ) {
                 return "Tablet";
             }
 
-            if (/Mobi|Android|iPhone|iPod/i.test(ua)) {
+            // Phone
+            if (
+                /Mobi|Android|iPhone|iPod/i.test(ua)
+            ) {
                 return "Phone";
             }
 
+            // Computer
             return "Laptop / Desktop";
         }
 
         const deviceType = getDeviceType();
 
+        // --------------------------------------------------
+        // Loading state
+        // --------------------------------------------------
+
         button.disabled = true;
         button.textContent = "SENDING...";
+
+        // --------------------------------------------------
+        // Send reservation to Supabase
+        // --------------------------------------------------
 
         const { data, error } = await supabaseClient
             .from("reservations")
@@ -70,6 +108,10 @@ if (reservationForm) {
             ])
             .select();
 
+        // --------------------------------------------------
+        // Error
+        // --------------------------------------------------
+
         if (error) {
 
             console.error("Reservation Error:", error);
@@ -83,6 +125,12 @@ if (reservationForm) {
 
             return;
         }
+
+        // --------------------------------------------------
+        // Success
+        // --------------------------------------------------
+
+        console.log("Reservation successfully created:", data);
 
         alert(
             "Your reservation has been submitted successfully! 👑"
