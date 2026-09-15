@@ -92,22 +92,20 @@ if (reservationForm) {
         // Send reservation to Supabase
         // --------------------------------------------------
 
-        const { data, error } = await supabaseClient
-            .from("reservations")
-            .insert([
-                {
-                    customer_name: customerName,
-                    customer_email: customerEmail,
-                    reservation_date: reservationDate,
-                    reservation_time: reservationTime,
-                    guest: guest,
-                    special_request: specialRequest,
-                    device_type: deviceType,
-                    status: "PENDING"
-                }
-            ])
-            .select();
-
+const { error } = await supabaseClient
+    .from("reservations")
+    .insert([
+        {
+            customer_name: customerName,
+            customer_email: customerEmail,
+            reservation_date: reservationDate,
+            reservation_time: reservationTime,
+            guest: guest,
+            special_request: specialRequest,
+            device_type: deviceType,
+            status: "PENDING"
+        }
+    ]);
         // --------------------------------------------------
         // Error
         // --------------------------------------------------
