@@ -1,7 +1,3 @@
-// ======================================================
-// ROYAL EXPERIENCE - SUPABASE CONNECTION
-// ======================================================
-
 const SUPABASE_URL = "https://ikekcalnwfdazaunwanc.supabase.co";
 const SUPABASE_KEY = "sb_publishable_l_GaN_6vC5FtJ2mQr4c9wA_Cp2F2D-9";
 
@@ -23,24 +19,22 @@ if (reservationForm) {
 
         event.preventDefault();
 
-        // --------------------------------------------------
-        // Get form elements
-        // --------------------------------------------------
-
         const inputs = reservationForm.querySelectorAll("input");
         const select = reservationForm.querySelector("select");
         const textarea = reservationForm.querySelector("textarea");
         const button = reservationForm.querySelector("button");
 
-        // --------------------------------------------------
-        // Get customer information
-        // --------------------------------------------------
-
         const customerName = inputs[0].value.trim();
         const customerEmail = inputs[1].value.trim();
         const reservationDate = inputs[2].value;
         const reservationTime = inputs[3].value;
-        const guest = select.value;
+
+        // Example: "4 Guests" -> 4
+        const guests = parseInt(
+            select.value.replace(/\D/g, ""),
+            10
+        );
+
         const specialRequest = textarea.value.trim();
 
         // --------------------------------------------------
@@ -52,7 +46,6 @@ if (reservationForm) {
             const ua = navigator.userAgent || "";
             const platform = navigator.platform || "";
 
-            // iPad
             if (
                 /iPad/i.test(ua) ||
                 (platform === "MacIntel" && navigator.maxTouchPoints > 1)
@@ -60,7 +53,6 @@ if (reservationForm) {
                 return "iPad";
             }
 
-            // Android Tablet
             if (
                 /Android/i.test(ua) &&
                 !/Mobile/i.test(ua)
@@ -68,71 +60,67 @@ if (reservationForm) {
                 return "Tablet";
             }
 
-            // Phone
             if (
                 /Mobi|Android|iPhone|iPod/i.test(ua)
             ) {
                 return "Phone";
             }
 
-            // Computer
             return "Laptop / Desktop";
         }
 
         const deviceType = getDeviceType();
 
         // --------------------------------------------------
-        // Loading state
+        // Loading
         // --------------------------------------------------
 
         button.disabled = true;
         button.textContent = "SENDING...";
 
         // --------------------------------------------------
-        // Send reservation to Supabase
+        // Insert reservation
         // --------------------------------------------------
 
-const { error } = await supabaseClient
-    .from("reservations")
-    .insert([
-        {
-            customer_name: customerName,
-            customer_email: customerEmail,
-            reservation_date: reservationDate,
-            reservation_time: reservationTime,
-            guest: guest,
-            special_request: specialRequest,
-            device_type: deviceType,
-            status: "PENDING"
-        }
-    ]);
+        const { error } = await supabaseClient
+            .from("reservations")
+            .insert([
+                {
+                    customer_name: customerName,
+                    customer_email: customerEmail,
+                    reservation_date: reservationDate,
+                    reservation_time: reservationTime,
+                    guests: guests,
+                    special_request: specialRequest,
+                    device_type: deviceType,
+                    status: "PENDING"
+                }
+            ]);
+
         // --------------------------------------------------
         // Error
         // --------------------------------------------------
 
-   if (error) {
+        if (error) {
 
-    console.error("Reservation Error:", error);
+            console.error("Reservation Error:", error);
 
-    alert(
-        "SUPABASE ERROR:\n\n" +
-        error.message +
-        "\n\nCODE: " +
-        error.code +
-        "\n\nDETAILS: " +
-        error.details
-    );
+            alert(
+                "SUPABASE ERROR:\n\n" +
+                error.message +
+                "\n\nCODE: " +
+                error.code
+            );
 
-    button.disabled = false;
-    button.textContent = "RESERVE A TABLE";
+            button.disabled = false;
+            button.textContent = "RESERVE A TABLE";
 
-    return;
-}
+            return;
+        }
+
         // --------------------------------------------------
         // Success
         // --------------------------------------------------
-
-        console.log("Reservation successfully created:", data);
 
         alert(
             "Your reservation has been submitted successfully! 👑"
